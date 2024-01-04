@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+
+<%- include("partials/nav") %>
+
+<h1>Reset password</h1>
+
+<form action="/reset" method="POST">
+
+    <input type="password" name="oldpassword" placeholder="Old password" id="">
+    <input type="password" name="newpassword" placeholder="New password" id="">
+
+    <button>Reset password</button>
+
+</form>
+
+<%- include("partials/footer") %>

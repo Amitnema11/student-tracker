@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+<%- include("partials/nav") %>
+<h1>Forget password</h1>
+
+<form action="/match-otp/<%=email %>" method="POST">
+
+    
+
+
+    <input type="number" name="otp" placeholder="Enterotp" id="">
+
+    <button class="btn btn-success mb-3">Confirm</button>
+
+</form>
+
+<%- include("partials/footer") %>

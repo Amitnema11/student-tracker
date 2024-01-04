@@ -1,0 +1,22 @@
+.show-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vmax;
+    padding-left: 10vmax;
+}
+
+.cards{
+    box-shadow: 0 0 10px gray;
+    width: 22vmax;
+    height: 14vmax;
+    margin-right: 2vmax;
+    margin-bottom: 1vmax;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    
+}

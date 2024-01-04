@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+
+<%- include("partials/nav") %>
+<h1>Student Registration</h1>
+
+<form action="/add" method="POST">
+
+  <input type="text" placeholder="Roll No." name="roll" class="form-control w-25 mb-3">
+  <input type="text" placeholder="Student Name" name="name" class="form-control w-25 mb-3">
+<input type="text" placeholder="Date of birth(dd/mm/yyyy)" name="date" class="form-control w-25 mb-3">
+<input type="text" placeholder="Gender" name="gender" class="form-control w-25 mb-3">
+<input type="text" placeholder="Class" name="class" class="form-control w-25 mb-3">
+<input type="text" placeholder="Percentage%" name="percentage" class="form-control w-25 mb-3">
+
+    <button class="btn btn-success mb-3">Register</button>
+
+</form>
+
+<%- include("partials/footer") %>

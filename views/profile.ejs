@@ -1,0 +1,56 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+<%- include("partials/nav") %>
+<h1>Student List</h1>
+
+<form action="/filter">
+
+<select name="key" style="padding: 10px 20px; border-radius: 10px;">
+<option >Select</option>
+<option value="name">Student name</option>
+<option value="roll">Roll no.</option>
+</select>
+
+<input type="text" name="value" placeholder="Search" style="padding: 10px 20px; border-radius: 10px;">
+<button class="btn btn-primary ">Filter</button>
+</form>
+<hr>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Roll no.</th>
+        <th scope="col">Student name</th>
+        <th scope="col">Date of birth</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Class</th>
+        <th scope="col">Percentage%</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <% var i=1 %>
+        <% posts.forEach(function(p){%>
+
+      <tr>
+        <th scope="row"><%=i++ %></th>
+        <td><%=p.roll %></td>
+        <td><%=p.name %></td>
+        <td><%=p.date %></td>
+        <td><%=p.gender %></td>
+        <td><%=p.class %></td>
+        <td><%=p.percentage %></td>
+        <td>
+            <a href="/update/<%=p._id %>">✏️</a>
+            <a href="/delete/<%=p._id %>">❌</a>
+        </td>
+
+      </tr>
+      <% })%>
+    </tbody>
+</table>
+
+<%- include("partials/footer") %>

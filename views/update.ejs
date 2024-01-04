@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+
+<%- include("partials/nav") %>
+<h1>Update student profile</h1>
+
+<form action="/update/<%= user._id%>" method="POST">
+
+  <input type="text" placeholder="Roll No." name="roll" value="<%= user.roll%>" class="form-control w-25 mb-3">
+  <input type="text" placeholder="Student Name" name="name" value="<%= user.name%>" class="form-control w-25 mb-3">
+<input type="text" placeholder="Date of birth(dd/mm/yyyy)" name="date" value="<%= user.date%>" class="form-control w-25 mb-3">
+<input type="text" placeholder="Gender" name="gender" value="<%= user.gender%>" class="form-control w-25 mb-3">
+<input type="text" placeholder="Class" name="class" value="<%= user.class%>"  class="form-control w-25 mb-3">
+<input type="text" placeholder="Percentage%" name="percentage" value="<%= user.percentage%>" class="form-control w-25 mb-3">
+
+    <button class="btn btn-success mb-3">Update</button>
+
+</form>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+
+<%- include("partials/nav") %>
+<h1>Signup page</h1>
+
+<form action="/signup" method="POST">
+
+    <input type="text" placeholder="Username" name="username" class="form-control w-25 mb-3">
+
+    <input type="email" name="email" placeholder="example@gmail.com" id="" class="form-control w-25 mb-3">
+
+    <input type="password" name="password" placeholder="Password" id="" class="form-control w-25 mb-3">
+
+    <button class="btn btn-success mb-3">Sign-up</button>
+
+    <p>Already have an account? <a href="/signin">Signin</a></p>
+</form>
+
+<%- include("partials/footer") %>
